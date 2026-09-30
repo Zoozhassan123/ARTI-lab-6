@@ -24,3 +24,16 @@ can_buy(Cost) :-
 
 % =================================================================
 % LAB TASK 1 - MODEL ANSWER  (also consider the colour)
+suggest_by_colour(Budget, Colour) :-
+    car(Model, Price, _, Colour, _),
+    Price < Budget,
+    write('With '), write(Price),
+    write(' you can purchase the car '), write(Model),
+    write(' in colour '), write(Colour), nl.
+
+suggest_by_colour(Budget, Colour) :-
+    truck(Model, Price, _, Colour, _),
+    Price < Budget,
+    write('With '), write(Price),
+    write(' you can purchase the truck '), write(Model),
+    write(' in colour '), write(Colour), nl.
